@@ -33,13 +33,21 @@ export const Codemap = {
 		message: "Incorrect Password",
 	},
 
+	INVALID_ADDRESS: {
+		code: 400,
+		message: "Invalid Address",
+	},
+	INVALID_CHAIN: {
+		code: 400,
+		message: "Invalid Chain Id",
+	},
 	INVALID_TESTNET: {
 		code: 400,
 		message: "Value of isTestnet is Invalid",
 	},
 	INVALID_CHAIN: {
 		code: 400,
-		message: "Chain Id is Invalid",
+		message: "Invalid Chain Id",
 	},
 	BAD_REQUEST: {
 		code: 400,
@@ -69,6 +77,10 @@ export const Codemap = {
 	NO_ROUTES: {
 		code: 404,
 		message: "No Routes Available",
+	},
+	NO_BALANCE: {
+		code: 404,
+		message: "No Token Balance Found",
 	},
 
 	USERNAME_CONFLICT: {
