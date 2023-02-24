@@ -1,4 +1,5 @@
 import AlchemyDAO from "../../dao/alchemyDAO.js";
+import BalanceDAO from "../../dao/balanceDAO.js";
 import { ethers } from "ethers";
 import { sendKeyResponse, sendCustomResponse } from "../../responses/index.js";
 import { chains } from "../../constants/index.js";
@@ -19,7 +20,7 @@ export default class BalanceController {
 		}
 
 		if (chains[chainId].api === "ALCHEMY") {
-			const result = await AlchemyDAO.getTokenBalance({
+			const result = await BalanceDAO.getTokenBalance({
 				chainId,
 				name: chains[chainId].name,
 				address: address,
