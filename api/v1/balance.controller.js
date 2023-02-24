@@ -1,8 +1,6 @@
-import AlchemyDAO from "../../dao/alchemyDAO.js";
 import BalanceDAO from "../../dao/balanceDAO.js";
 import { ethers } from "ethers";
 import { sendKeyResponse, sendCustomResponse } from "../../responses/index.js";
-import { chains } from "../../constants/index.js";
 
 export default class BalanceController {
 	static getWalletBalance = async (req, res) => {
@@ -42,7 +40,7 @@ export default class BalanceController {
 				});
 			}
 		} catch (err) {
-			sendKeyResponse(res, "SOMETHIN_WENT_WRONG");
+			sendKeyResponse(res, "SOMETHING_WENT_WRONG");
 		}
 	};
 }
