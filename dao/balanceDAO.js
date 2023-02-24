@@ -5,9 +5,13 @@ export default class BalanceDAO {
 	static getWalletBalance = async ({ chainId, address }) => {
 		try {
 			// initial variables
-			let native;
+			let balance = parseFloat(0);
 			let addressBalance = [];
-			let valueUSD = parseFloat(0);
+			let valueUSD = {
+				native: parseFloat(0),
+				token: parseFloat(0),
+				wallet: parseFloat(0),
+			};
 
 			// fetching all tokens
 			const requestAllTokens = await fetch(`https://li.quest/v1/tokens`, {
@@ -46,14 +50,10 @@ export default class BalanceDAO {
 			nativeBalance = parseInt(nativeBalance) / Math.pow(10, parseInt(tokens[0].decimals));
 			let nativeValueUSD = nativeBalance * parseFloat(tokens[0].priceUSD);
 
-			// setting native balance
-			native = {
-				balance: nativeBalance,
-				valueUSD: nativeValueUSD,
-			};
-
-			// adding native USD balance
-			valueUSD += nativeValueUSD;
+			// setting values in USD
+			balance = nativeBalance;
+			valueUSD.native = nativeValueUSD;
+			valueUSD.wallet += nativeValueUSD;
 
 			// calling getBalance method for contract address of all tokens parallely
 			await Promise.allSettled(
@@ -81,7 +81,8 @@ export default class BalanceDAO {
 						});
 
 						// setting global USD value
-						valueUSD += thisValueUSD;
+						valueUSD.token += thisValueUSD;
+						valueUSD.wallet += thisValueUSD;
 					}
 				})
 			);
@@ -93,13 +94,17 @@ export default class BalanceDAO {
 			} else {
 				return {
 					status: "SUCCESS",
+					native: {
+						...tokens[0],
+						priceUSD: parseFloat(tokens[0].priceUSD),
+						balance: balance,
+						valueUSD: valueUSD.native,
+					},
 					valueUSD: valueUSD,
-					native: native,
 					balances: addressBalance,
 				};
 			}
 		} catch (err) {
-			console.log(err);
 			return {
 				status: "INTERNAL_SERVER_ERROR",
 				error: err,
