@@ -8,33 +8,54 @@ export default class LifiDAO {
 	};
 
 	static getChains = async ({ isTestnet }) => {
-		const apiUrl = this.getApiUrl(isTestnet);
+		try {
+			const apiUrl = this.getApiUrl(isTestnet);
 
-		const data = await fetch(`${apiUrl}chains`, {
-			method: "GET",
-			headers: { accept: "application/json" },
-		});
+			const data = await fetch(`${apiUrl}chains`, {
+				method: "GET",
+				headers: { accept: "application/json" },
+			});
+			let chains = await data.json();
+			chains = chains.chains;
 
-		const chains = await data.json();
+			chains = chains.map((chain) => ({
+				...chain,
+				nativeToken: {
+					...chain.nativeToken,
+					priceUSD: parseFloat(chain.nativeToken.priceUSD),
+				},
+			}));
 
-		return {
-			chains: chains.chains,
-		};
+			return {
+				status: "SUCCESS",
+				chains: chains,
+			};
+		} catch (err) {
+			return {
+				status: "INTERNAL_SERVER_ERROR",
+			};
+		}
 	};
 
 	static getTokens = async ({ isTestnet, chainId }) => {
-		const apiUrl = this.getApiUrl(isTestnet);
+		try {
+			const apiUrl = this.getApiUrl(isTestnet);
 
-		const data = await fetch(`${apiUrl}tokens`, {
-			method: "GET",
-			headers: { accept: "application/json" },
-		});
+			const data = await fetch(`${apiUrl}tokens`, {
+				method: "GET",
+				headers: { accept: "application/json" },
+			});
 
-		const allTokens = await data.json();
+			const allTokens = await data.json();
+			let tokens = allTokens.tokens[chainId];
+			tokens = tokens.map((token) => ({ ...token, priceUSD: parseFloat(token.priceUSD) }));
 
-		const tokens = allTokens.tokens[chainId];
-
-		return { tokens: tokens };
+			return { status: "SUCCESS", tokens: tokens };
+		} catch (err) {
+			return {
+				status: "INVALID_CHAIN",
+			};
+		}
 	};
 
 	static getRoutes = async ({

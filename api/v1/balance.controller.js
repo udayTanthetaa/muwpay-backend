@@ -5,24 +5,23 @@ import { sendKeyResponse, sendCustomResponse } from "../../responses/index.js";
 import { chains } from "../../constants/index.js";
 
 export default class BalanceController {
-	static getTokenBalance = async (req, res) => {
-		const address = req.query.address;
-		const chainId = req.query.chainId;
+	static getWalletBalance = async (req, res) => {
+		try {
+			const address = req.query.address;
+			const chainId = req.query.chainId;
 
-		if (chainId === undefined || !Number.isInteger(parseInt(chainId)) || chains[chainId] === undefined) {
-			sendKeyResponse(res, "INVALID_CHAIN");
-			return;
-		}
+			if (chainId === undefined || !Number.isInteger(parseInt(chainId))) {
+				sendKeyResponse(res, "INVALID_CHAIN");
+				return;
+			}
 
-		if (address === undefined || !ethers.isAddress(address)) {
-			sendKeyResponse(res, "INVALID_ADDRESS");
-			return;
-		}
+			if (address === undefined || !ethers.isAddress(address)) {
+				sendKeyResponse(res, "INVALID_ADDRESS");
+				return;
+			}
 
-		if (chains[chainId].api === "ALCHEMY") {
-			const result = await BalanceDAO.getTokenBalance({
+			const result = await BalanceDAO.getWalletBalance({
 				chainId,
-				name: chains[chainId].name,
 				address: address,
 			});
 
@@ -30,6 +29,7 @@ export default class BalanceController {
 				sendCustomResponse(res, result.status, {
 					address: address,
 					valueUSD: result.valueUSD,
+					native: result.native,
 					tokens: result.balances,
 				});
 			} else if (result.status === "NO_BALANCE") {
@@ -41,8 +41,8 @@ export default class BalanceController {
 					error: result.error,
 				});
 			}
-		} else {
-			sendKeyResponse(res, "INVALID_CHAIN");
+		} catch (err) {
+			sendKeyResponse(res, "SOMETHIN_WENT_WRONG");
 		}
 	};
 }

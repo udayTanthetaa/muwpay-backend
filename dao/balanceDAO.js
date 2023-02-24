@@ -1,12 +1,11 @@
-import dotenv from "dotenv";
-import { chains, erc20ABI } from "../constants/index.js";
+import { erc20ABI } from "../constants/index.js";
 import { ethers } from "ethers";
 
 export default class BalanceDAO {
-	static getTokenBalance = async ({ chainId, name, address }) => {
+	static getWalletBalance = async ({ chainId, address }) => {
 		try {
 			// initial variables
-			let balances = [];
+			let native;
 			let addressBalance = [];
 			let valueUSD = parseFloat(0);
 
@@ -17,6 +16,13 @@ export default class BalanceDAO {
 			});
 			const allTokens = await requestAllTokens.json();
 			const tokens = allTokens.tokens[chainId];
+
+			// invalid chain condition
+			if (tokens === undefined) {
+				return {
+					status: "INVALID_CHAIN",
+				};
+			}
 
 			// fetching all chains
 			const requestAllChains = await fetch(`https://li.quest/v1/chains`, {
@@ -34,6 +40,20 @@ export default class BalanceDAO {
 				chainId: chain.id,
 				name: chain.name,
 			});
+
+			// fetching native balance
+			let nativeBalance = await provider.getBalance(address);
+			nativeBalance = parseInt(nativeBalance) / Math.pow(10, parseInt(tokens[0].decimals));
+			let nativeValueUSD = nativeBalance * parseFloat(tokens[0].priceUSD);
+
+			// setting native balance
+			native = {
+				balance: nativeBalance,
+				valueUSD: nativeValueUSD,
+			};
+
+			// adding native USD balance
+			valueUSD += nativeValueUSD;
 
 			// calling getBalance method for contract address of all tokens parallely
 			await Promise.allSettled(
@@ -55,9 +75,13 @@ export default class BalanceDAO {
 						// pushing balance with token details
 						addressBalance.push({
 							...token,
+							priceUSD: parseFloat(token.priceUSD),
 							balance: thisTokenBalance,
 							valueUSD: thisValueUSD,
 						});
+
+						// setting global USD value
+						valueUSD += thisValueUSD;
 					}
 				})
 			);
@@ -70,10 +94,12 @@ export default class BalanceDAO {
 				return {
 					status: "SUCCESS",
 					valueUSD: valueUSD,
+					native: native,
 					balances: addressBalance,
 				};
 			}
 		} catch (err) {
+			console.log(err);
 			return {
 				status: "INTERNAL_SERVER_ERROR",
 				error: err,

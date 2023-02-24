@@ -33,84 +33,119 @@ export default class LifiController {
 	};
 
 	static getChains = async (req, res) => {
-		const isTestnet = req.query.isTestnet;
+		try {
+			const isTestnet = req.query.isTestnet;
 
-		if (!this.isTestnetValid(isTestnet)) {
-			sendKeyResponse(res, "INVALID_TESTNET");
-			return;
+			if (!this.isTestnetValid(isTestnet)) {
+				sendKeyResponse(res, "INVALID_TESTNET");
+				return;
+			}
+
+			const chains = await LifiDAO.getChains({
+				isTestnet: isTestnet,
+			});
+
+			if (chains.status === "SUCCESS") {
+				if (chains.chains === undefined) {
+					sendKeyResponse(res, "SOMETHING_WENT_WRONG");
+				} else {
+					sendCustomResponse(res, "SUCCESS", {
+						chains: chains.chains,
+					});
+				}
+			} else {
+				sendKeyResponse(res, chains.status);
+			}
+		} catch (err) {
+			sendKeyResponse(res, "SOMETHING_WENT_WRONG");
 		}
-
-		const chains = await LifiDAO.getChains({
-			isTestnet: isTestnet,
-		});
-
-		sendCustomResponse(res, "SUCCESS", chains);
 	};
 
 	static getTokens = async (req, res) => {
-		const isTestnet = req.query.isTestnet;
-		const chainId = req.query.chainId;
+		try {
+			const isTestnet = req.query.isTestnet;
+			const chainId = req.query.chainId;
 
-		if (!this.isTestnetValid(isTestnet)) {
-			sendKeyResponse(res, "INVALID_TESTNET");
-			return;
-		}
+			if (!this.isTestnetValid(isTestnet)) {
+				sendKeyResponse(res, "INVALID_TESTNET");
+				return;
+			}
 
-		const tokens = await LifiDAO.getTokens({
-			isTestnet: isTestnet,
-			chainId: chainId,
-		});
+			const tokens = await LifiDAO.getTokens({
+				isTestnet: isTestnet,
+				chainId: chainId,
+			});
 
-		if (tokens.tokens === undefined) {
-			sendKeyResponse(res, "INVALID_CHAIN");
-		} else {
-			sendCustomResponse(res, "SUCCESS", tokens);
+			if (tokens.status === "SUCCESS") {
+				if (tokens.tokens === undefined) {
+					sendKeyResponse(res, "INVALID_CHAIN");
+				} else {
+					sendCustomResponse(res, tokens.status, {
+						tokens: tokens.tokens,
+					});
+				}
+			} else {
+				sendKeyResponse(res, tokens.status);
+			}
+		} catch (err) {
+			sendKeyResponse(res, "SOMETHING_WENT_WRONG");
 		}
 	};
 
 	static getRoutes = async (req, res) => {
-		const isTestnet = req.query.isTestnet;
-		const fromChainId = req.query.fromChainId;
-		const toChainId = req.query.toChainId;
-		const fromTokenAddress = req.query.fromTokenAddress;
-		const toTokenAddress = req.query.toTokenAddress;
-		const fromAddress = req.query.fromAddress;
-		const fromAmount = req.query.fromAmount;
+		try {
+			const isTestnet = req.query.isTestnet;
+			const fromChainId = req.query.fromChainId;
+			const toChainId = req.query.toChainId;
+			const fromTokenAddress = req.query.fromTokenAddress;
+			const toTokenAddress = req.query.toTokenAddress;
+			const fromAddress = req.query.fromAddress;
+			const fromAmount = req.query.fromAmount;
 
-		if (!this.isTestnetValid(isTestnet)) {
-			sendKeyResponse(res, "INVALID_TESTNET");
-			return;
-		}
-
-		if (
-			!this.isRouteRequestValid(fromChainId, toChainId, fromTokenAddress, toTokenAddress, fromAddress, fromAmount)
-		) {
-			sendKeyResponse(res, "BAD_REQUEST");
-			return;
-		}
-
-		const routes = await LifiDAO.getRoutes({
-			isTestnet,
-			fromChainId,
-			toChainId,
-			fromTokenAddress,
-			toTokenAddress,
-			fromAddress,
-			fromAmount,
-		});
-
-		if (routes.status === "ERROR") {
-			sendCustomResponse(res, "INTERNAL_SERVER_ERROR", {
-				error: routes.error,
-			});
-		} else {
-			if (routes.routes.length === 0) {
-				sendKeyResponse(res, "NO_ROUTES");
-			} else {
-				sendCustomResponse(res, "SUCCESS", {
-					routes: routes.routes,
-				});
+			if (!this.isTestnetValid(isTestnet)) {
+				sendKeyResponse(res, "INVALID_TESTNET");
+				return;
 			}
+
+			if (
+				!this.isRouteRequestValid(
+					fromChainId,
+					toChainId,
+					fromTokenAddress,
+					toTokenAddress,
+					fromAddress,
+					fromAmount
+				)
+			) {
+				sendKeyResponse(res, "BAD_REQUEST");
+				return;
+			}
+
+			const routes = await LifiDAO.getRoutes({
+				isTestnet,
+				fromChainId,
+				toChainId,
+				fromTokenAddress,
+				toTokenAddress,
+				fromAddress,
+				fromAmount,
+			});
+
+			if (routes.status === "ERROR") {
+				sendCustomResponse(res, "INTERNAL_SERVER_ERROR", {
+					error: routes.error,
+				});
+			} else {
+				if (routes.routes.length === 0) {
+					sendKeyResponse(res, "NO_ROUTES");
+				} else {
+					sendCustomResponse(res, "SUCCESS", {
+						routes: routes.routes,
+					});
+				}
+			}
+		} catch (err) {
+			sendKeyResponse(res, "SOMETHING_WENT_WRONG");
 		}
 	};
 }

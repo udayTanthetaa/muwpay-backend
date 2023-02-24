@@ -3,6 +3,6 @@ import BalanceController from "./balance.controller.js";
 
 const router = express.Router();
 
-router.route("/token").get(BalanceController.getTokenBalance);
+router.route("/wallet").get(BalanceController.getWalletBalance);
 
 export default router;
