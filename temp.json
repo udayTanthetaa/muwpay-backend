@@ -1,0 +1,2557 @@
+{
+	"code": 201,
+	"message": "Success",
+	"routes": [
+		{
+			"id": "0xe205805579fb9a91e440579f9477a99859e9c72a6b9b33fe1133b0423df58a9a",
+			"fromChainId": 1,
+			"fromAmountUSD": "16.40",
+			"fromAmount": "10000000000000000",
+			"fromToken": {
+				"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+				"chainId": 1,
+				"symbol": "WETH",
+				"decimals": 18,
+				"name": "WETH",
+				"priceUSD": "1640.28",
+				"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+				"coinKey": "WETH"
+			},
+			"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"toChainId": 137,
+			"toAmountUSD": "16.13",
+			"toAmount": "16128154",
+			"toAmountMin": "16047513",
+			"toToken": {
+				"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+				"chainId": 137,
+				"symbol": "USDC",
+				"decimals": 6,
+				"name": "USDC",
+				"priceUSD": "1",
+				"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+				"coinKey": "USDC"
+			},
+			"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"gasCostUSD": "23.05",
+			"containsSwitchChain": false,
+			"steps": [
+				{
+					"id": "b78588dd-0b13-4fb4-ba25-72a3992e4241",
+					"type": "lifi",
+					"action": {
+						"fromChainId": 1,
+						"fromAmount": "10000000000000000",
+						"fromToken": {
+							"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+							"chainId": 1,
+							"symbol": "WETH",
+							"decimals": 18,
+							"name": "WETH",
+							"priceUSD": "1640.28",
+							"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+							"coinKey": "WETH"
+						},
+						"toChainId": 137,
+						"toToken": {
+							"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+							"chainId": 137,
+							"symbol": "USDC",
+							"decimals": 6,
+							"name": "USDC",
+							"priceUSD": "1",
+							"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+							"coinKey": "USDC"
+						},
+						"slippage": 0.005,
+						"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+						"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00"
+					},
+					"estimate": {
+						"fromAmount": "10000000000000000",
+						"toAmount": "16128154",
+						"toAmountMin": "16047513",
+						"approvalAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+						"executionDuration": 258,
+						"feeCosts": [
+							{
+								"name": "CrossChain Fee",
+								"percentage": "85",
+								"token": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amount": "190000",
+								"amountUSD": "0"
+							}
+						],
+						"gasCosts": [
+							{
+								"type": "SEND",
+								"price": "22633444520",
+								"estimate": "465731",
+								"limit": "620974",
+								"amount": "14054780577362480",
+								"amountUSD": "23.05",
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								}
+							}
+						],
+						"data": {
+							"fromToken": {
+								"symbol": "WETH",
+								"name": "Wrapped Ether",
+								"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+								"decimals": 18,
+								"logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
+								"wrappedNative": "true",
+								"tags": ["tokens", "PEG:ETH"]
+							},
+							"toToken": {
+								"symbol": "USDC",
+								"name": "USD Coin",
+								"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+								"decimals": 6,
+								"logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+								"eip2612": true,
+								"domainVersion": "2",
+								"tags": ["tokens", "PEG:USD"]
+							},
+							"toTokenAmount": "16319109",
+							"fromTokenAmount": "10000000000000000",
+							"protocols": [
+								[
+									[
+										{
+											"name": "DEFISWAP",
+											"part": 100,
+											"fromTokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+											"toTokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+										}
+									]
+								]
+							],
+							"estimatedGas": 186779
+						},
+						"fromAmountUSD": "16.40",
+						"toAmountUSD": "16.13"
+					},
+					"tool": "multichain",
+					"toolDetails": {
+						"key": "multichain",
+						"name": "Multichain",
+						"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/anyswap.png"
+					},
+					"includedSteps": [
+						{
+							"id": "b78588dd-0b13-4fb4-ba25-72a3992e4241",
+							"type": "swap",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "10000000000000000",
+								"fromToken": {
+									"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+									"chainId": 1,
+									"symbol": "WETH",
+									"decimals": 18,
+									"name": "WETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+									"coinKey": "WETH"
+								},
+								"toChainId": 1,
+								"toToken": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "10000000000000000",
+								"toAmount": "16319109",
+								"toAmountMin": "16237513",
+								"approvalAddress": "0x1111111254eeb25477b68fb85ed929f73a960582",
+								"executionDuration": 30,
+								"feeCosts": [],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "175105",
+										"limit": "233474",
+										"amount": "5284315167501350",
+										"amountUSD": "8.67",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"fromToken": {
+										"symbol": "WETH",
+										"name": "Wrapped Ether",
+										"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+										"decimals": 18,
+										"logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
+										"wrappedNative": "true",
+										"tags": ["tokens", "PEG:ETH"]
+									},
+									"toToken": {
+										"symbol": "USDC",
+										"name": "USD Coin",
+										"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+										"decimals": 6,
+										"logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+										"eip2612": true,
+										"domainVersion": "2",
+										"tags": ["tokens", "PEG:USD"]
+									},
+									"toTokenAmount": "16319109",
+									"fromTokenAmount": "10000000000000000",
+									"protocols": [
+										[
+											[
+												{
+													"name": "DEFISWAP",
+													"part": 100,
+													"fromTokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+													"toTokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+												}
+											]
+										]
+									],
+									"estimatedGas": 186779
+								}
+							},
+							"tool": "1inch",
+							"toolDetails": {
+								"key": "1inch",
+								"name": "1inch",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oneinch.png"
+							}
+						},
+						{
+							"id": "98bf79f1-987e-42dc-a529-00c8eb0d223b",
+							"type": "cross",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "16237513",
+								"fromToken": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"toChainId": 137,
+								"toToken": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "16319109",
+								"toAmount": "16128154",
+								"toAmountMin": "16047513",
+								"approvalAddress": "0x6b7a87899490ece95443e979ca9485cbe7e71522",
+								"executionDuration": 228,
+								"feeCosts": [
+									{
+										"name": "CrossChain Fee",
+										"percentage": "85",
+										"token": {
+											"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+											"chainId": 1,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amount": "190000"
+									}
+								],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "103125",
+										"limit": "137500",
+										"amount": "3112098621500000",
+										"amountUSD": "5.10",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {}
+							},
+							"tool": "multichain",
+							"toolDetails": {
+								"key": "multichain",
+								"name": "Multichain",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/anyswap.png"
+							}
+						}
+					],
+					"integrator": "lifi-sdk"
+				}
+			],
+			"tags": ["RECOMMENDED", "CHEAPEST"]
+		},
+		{
+			"id": "0xb138bafa2f34afc8162d4f1c26a4265adaaba670a07db03886e27b7f9b42e3e4",
+			"fromChainId": 1,
+			"fromAmountUSD": "16.40",
+			"fromAmount": "10000000000000000",
+			"fromToken": {
+				"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+				"chainId": 1,
+				"symbol": "WETH",
+				"decimals": 18,
+				"name": "WETH",
+				"priceUSD": "1640.28",
+				"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+				"coinKey": "WETH"
+			},
+			"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"toChainId": 137,
+			"toAmountUSD": "16.25",
+			"toAmount": "16252123",
+			"toAmountMin": "16090008",
+			"toToken": {
+				"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+				"chainId": 137,
+				"symbol": "USDC",
+				"decimals": 6,
+				"name": "USDC",
+				"priceUSD": "1",
+				"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+				"coinKey": "USDC"
+			},
+			"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"gasCostUSD": "51.15",
+			"containsSwitchChain": false,
+			"steps": [
+				{
+					"id": "014ec0bd-30d6-41ce-940f-44f4737aef4e",
+					"type": "lifi",
+					"action": {
+						"fromChainId": 1,
+						"fromAmount": "10000000000000000",
+						"fromToken": {
+							"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+							"chainId": 1,
+							"symbol": "WETH",
+							"decimals": 18,
+							"name": "WETH",
+							"priceUSD": "1640.28",
+							"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+							"coinKey": "WETH"
+						},
+						"toChainId": 137,
+						"toToken": {
+							"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+							"chainId": 137,
+							"symbol": "USDC",
+							"decimals": 6,
+							"name": "USDC",
+							"priceUSD": "1",
+							"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+							"coinKey": "USDC"
+						},
+						"slippage": 0.005,
+						"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+						"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00"
+					},
+					"estimate": {
+						"fromAmount": "10000000000000000",
+						"toAmount": "16252123",
+						"toAmountMin": "16090008",
+						"approvalAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+						"executionDuration": 213,
+						"feeCosts": [
+							{
+								"name": "LP Fee",
+								"percentage": "0.003",
+								"token": {
+									"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+									"chainId": 1,
+									"symbol": "WETH",
+									"decimals": 18,
+									"name": "WETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+									"coinKey": "WETH"
+								},
+								"amount": "30000000000000",
+								"amountUSD": "0"
+							},
+							{
+								"name": "LayerZero fees",
+								"description": "Infrastructure fee paid in native token",
+								"amount": "61918120318219",
+								"percentage": "0.0063",
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Equilibrium fees",
+								"description": "The fee paid to users who rebalance tokens for the stargate protocol",
+								"amount": "47484",
+								"percentage": "0.0029",
+								"token": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Liquidity provider fees",
+								"description": "The fee paid to liquidity providers for the stargate protocol",
+								"amount": "0",
+								"percentage": "0.0000",
+								"token": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Protocol fees",
+								"description": "The fee paid to the stargate protocol",
+								"amount": "16234",
+								"percentage": "0.0010",
+								"token": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"amountUSD": "0"
+							}
+						],
+						"gasCosts": [
+							{
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								},
+								"type": "SEND",
+								"price": "45266889040",
+								"estimate": "0x0fbc52",
+								"limit": "0x14fb18",
+								"amount": "31182904335318219",
+								"amountUSD": "51.15"
+							}
+						],
+						"data": {
+							"path": [
+								"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+								"0x6b175474e89094c44da98b954eedeac495271d0f",
+								"0xdac17f958d2ee523a2206206994597c13d831ec7"
+							],
+							"routerAddress": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+						},
+						"fromAmountUSD": "16.40",
+						"toAmountUSD": "16.25"
+					},
+					"tool": "stargate",
+					"toolDetails": {
+						"key": "stargate",
+						"name": "Stargate",
+						"logoURI": "https://raw.githubusercontent.com/lifinance/types/5685c638772f533edad80fcb210b4bb89e30a50f/src/assets/icons/bridges/stargate.png"
+					},
+					"includedSteps": [
+						{
+							"id": "014ec0bd-30d6-41ce-940f-44f4737aef4e",
+							"type": "swap",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "10000000000000000",
+								"fromToken": {
+									"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+									"chainId": 1,
+									"symbol": "WETH",
+									"decimals": 18,
+									"name": "WETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+									"coinKey": "WETH"
+								},
+								"toChainId": 1,
+								"toToken": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "10000000000000000",
+								"toAmount": "16316161",
+								"toAmountMin": "16234580",
+								"approvalAddress": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+								"executionDuration": 30,
+								"feeCosts": [
+									{
+										"name": "LP Fee",
+										"percentage": "0.003",
+										"token": {
+											"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+											"chainId": 1,
+											"symbol": "WETH",
+											"decimals": 18,
+											"name": "WETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+											"coinKey": "WETH"
+										},
+										"amount": "30000000000000"
+									}
+								],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "328125",
+										"limit": "437500",
+										"amount": "9902131977500000",
+										"amountUSD": "16.24",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"path": [
+										"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+										"0x6b175474e89094c44da98b954eedeac495271d0f",
+										"0xdac17f958d2ee523a2206206994597c13d831ec7"
+									],
+									"routerAddress": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+								}
+							},
+							"tool": "uniswap-eth",
+							"toolDetails": {
+								"key": "uniswap-eth",
+								"name": "UniswapV2",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png"
+							}
+						},
+						{
+							"id": "814cce42-067d-49e6-b0a6-9cfcf3309098",
+							"type": "cross",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "16234580",
+								"fromToken": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"toChainId": 137,
+								"toToken": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "16316161",
+								"toAmount": "16252123",
+								"toAmountMin": "16090008",
+								"approvalAddress": "0x8731d54E9D02c286767d56ac03e8037C07e01e98",
+								"executionDuration": 183,
+								"feeCosts": [
+									{
+										"name": "LayerZero fees",
+										"description": "Infrastructure fee paid in native token",
+										"amount": "61918120318219",
+										"percentage": "0.0063",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										},
+										"amountUSD": "0.10"
+									},
+									{
+										"name": "Equilibrium fees",
+										"description": "The fee paid to users who rebalance tokens for the stargate protocol",
+										"amount": "47484",
+										"percentage": "0.0029",
+										"token": {
+											"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+											"chainId": 1,
+											"symbol": "USDT",
+											"decimals": 6,
+											"name": "USDT",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+											"coinKey": "USDT"
+										},
+										"amountUSD": "0.05"
+									},
+									{
+										"name": "Liquidity provider fees",
+										"description": "The fee paid to liquidity providers for the stargate protocol",
+										"amount": "0",
+										"percentage": "0.0000",
+										"token": {
+											"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+											"chainId": 1,
+											"symbol": "USDT",
+											"decimals": 6,
+											"name": "USDT",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+											"coinKey": "USDT"
+										},
+										"amountUSD": "0.00"
+									},
+									{
+										"name": "Protocol fees",
+										"description": "The fee paid to the stargate protocol",
+										"amount": "16234",
+										"percentage": "0.0010",
+										"token": {
+											"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+											"chainId": 1,
+											"symbol": "USDT",
+											"decimals": 6,
+											"name": "USDT",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+											"coinKey": "USDT"
+										},
+										"amountUSD": "0.02"
+									}
+								],
+								"gasCosts": [
+									{
+										"type": "FEE",
+										"price": "22633444520",
+										"estimate": "0",
+										"limit": "0",
+										"amount": "61918120318219",
+										"amountUSD": "0.10",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									},
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "515625",
+										"limit": "687500",
+										"amount": "15560493107500000",
+										"amountUSD": "25.52",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"stargateData": {
+										"dstPoolId": "1",
+										"minAmountLD": "16090008",
+										"dstGasForCall": "0",
+										"refundAddress": "0x552008c0f6870c2f77e5cC1d2eb9bdff03e30Ea0",
+										"lzFee": "61918120318219",
+										"callTo": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+										"callData": "0x"
+									},
+									"offchainStargateData": {
+										"sourcePoolId": "2",
+										"destinationPoolId": "1",
+										"router": "0x8731d54E9D02c286767d56ac03e8037C07e01e98",
+										"layerZeroChainId": 109
+									}
+								}
+							},
+							"tool": "stargate",
+							"toolDetails": {
+								"key": "stargate",
+								"name": "Stargate",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/5685c638772f533edad80fcb210b4bb89e30a50f/src/assets/icons/bridges/stargate.png"
+							}
+						}
+					],
+					"integrator": "lifi-sdk"
+				}
+			],
+			"tags": []
+		},
+		{
+			"id": "0x6f5658c5530ff1b312ddb59d89e8bee7ed4c571266273131fd6e566567fc7adf",
+			"fromChainId": 1,
+			"fromAmountUSD": "16.40",
+			"fromAmount": "10000000000000000",
+			"fromToken": {
+				"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+				"chainId": 1,
+				"symbol": "WETH",
+				"decimals": 18,
+				"name": "WETH",
+				"priceUSD": "1640.28",
+				"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+				"coinKey": "WETH"
+			},
+			"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"toChainId": 137,
+			"toAmountUSD": "16.25",
+			"toAmount": "16252123",
+			"toAmountMin": "16090008",
+			"toToken": {
+				"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+				"chainId": 137,
+				"symbol": "USDC",
+				"decimals": 6,
+				"name": "USDC",
+				"priceUSD": "1",
+				"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+				"coinKey": "USDC"
+			},
+			"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"gasCostUSD": "51.15",
+			"containsSwitchChain": false,
+			"steps": [
+				{
+					"id": "fffb9d33-f99c-4149-ab71-253e4fde4780",
+					"type": "lifi",
+					"action": {
+						"fromChainId": 1,
+						"fromAmount": "10000000000000000",
+						"fromToken": {
+							"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+							"chainId": 1,
+							"symbol": "WETH",
+							"decimals": 18,
+							"name": "WETH",
+							"priceUSD": "1640.28",
+							"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+							"coinKey": "WETH"
+						},
+						"toChainId": 137,
+						"toToken": {
+							"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+							"chainId": 137,
+							"symbol": "USDC",
+							"decimals": 6,
+							"name": "USDC",
+							"priceUSD": "1",
+							"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+							"coinKey": "USDC"
+						},
+						"slippage": 0.005,
+						"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+						"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00"
+					},
+					"estimate": {
+						"fromAmount": "10000000000000000",
+						"toAmount": "16252123",
+						"toAmountMin": "16090008",
+						"approvalAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+						"executionDuration": 213,
+						"feeCosts": [
+							{
+								"name": "LP Fee",
+								"percentage": "0.003",
+								"token": {
+									"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+									"chainId": 1,
+									"symbol": "WETH",
+									"decimals": 18,
+									"name": "WETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+									"coinKey": "WETH"
+								},
+								"amount": "30000000000000",
+								"amountUSD": "0"
+							},
+							{
+								"name": "LayerZero fees",
+								"description": "Infrastructure fee paid in native token",
+								"amount": "61918120318219",
+								"percentage": "0.0063",
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Equilibrium fees",
+								"description": "The fee paid to users who rebalance tokens for the stargate protocol",
+								"amount": "47484",
+								"percentage": "0.0029",
+								"token": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Liquidity provider fees",
+								"description": "The fee paid to liquidity providers for the stargate protocol",
+								"amount": "0",
+								"percentage": "0.0000",
+								"token": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Protocol fees",
+								"description": "The fee paid to the stargate protocol",
+								"amount": "16234",
+								"percentage": "0.0010",
+								"token": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"amountUSD": "0"
+							}
+						],
+						"gasCosts": [
+							{
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								},
+								"type": "SEND",
+								"price": "45266889040",
+								"estimate": "0x0fbc52",
+								"limit": "0x14fb18",
+								"amount": "31182904335318219",
+								"amountUSD": "51.15"
+							}
+						],
+						"data": {
+							"path": [
+								"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+								"0x6b175474e89094c44da98b954eedeac495271d0f",
+								"0xdac17f958d2ee523a2206206994597c13d831ec7"
+							],
+							"routerAddress": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+						},
+						"fromAmountUSD": "16.40",
+						"toAmountUSD": "16.25"
+					},
+					"tool": "stargate",
+					"toolDetails": {
+						"key": "stargate",
+						"name": "Stargate",
+						"logoURI": "https://raw.githubusercontent.com/lifinance/types/5685c638772f533edad80fcb210b4bb89e30a50f/src/assets/icons/bridges/stargate.png"
+					},
+					"includedSteps": [
+						{
+							"id": "fffb9d33-f99c-4149-ab71-253e4fde4780",
+							"type": "swap",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "10000000000000000",
+								"fromToken": {
+									"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+									"chainId": 1,
+									"symbol": "WETH",
+									"decimals": 18,
+									"name": "WETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+									"coinKey": "WETH"
+								},
+								"toChainId": 1,
+								"toToken": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "10000000000000000",
+								"toAmount": "16316161",
+								"toAmountMin": "16234580",
+								"approvalAddress": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+								"executionDuration": 30,
+								"feeCosts": [
+									{
+										"name": "LP Fee",
+										"percentage": "0.003",
+										"token": {
+											"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+											"chainId": 1,
+											"symbol": "WETH",
+											"decimals": 18,
+											"name": "WETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+											"coinKey": "WETH"
+										},
+										"amount": "30000000000000"
+									}
+								],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "328125",
+										"limit": "437500",
+										"amount": "9902131977500000",
+										"amountUSD": "16.24",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"path": [
+										"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+										"0x6b175474e89094c44da98b954eedeac495271d0f",
+										"0xdac17f958d2ee523a2206206994597c13d831ec7"
+									],
+									"routerAddress": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+								}
+							},
+							"tool": "uniswap-eth",
+							"toolDetails": {
+								"key": "uniswap-eth",
+								"name": "UniswapV2",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png"
+							}
+						},
+						{
+							"id": "6b8296f8-613f-4b71-beda-2dcb888b9c2b",
+							"type": "cross",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "16234580",
+								"fromToken": {
+									"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+									"chainId": 1,
+									"symbol": "USDT",
+									"decimals": 6,
+									"name": "USDT",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+									"coinKey": "USDT"
+								},
+								"toChainId": 137,
+								"toToken": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "16316161",
+								"toAmount": "16252123",
+								"toAmountMin": "16090008",
+								"approvalAddress": "0x8731d54E9D02c286767d56ac03e8037C07e01e98",
+								"executionDuration": 183,
+								"feeCosts": [
+									{
+										"name": "LayerZero fees",
+										"description": "Infrastructure fee paid in native token",
+										"amount": "61918120318219",
+										"percentage": "0.0063",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										},
+										"amountUSD": "0.10"
+									},
+									{
+										"name": "Equilibrium fees",
+										"description": "The fee paid to users who rebalance tokens for the stargate protocol",
+										"amount": "47484",
+										"percentage": "0.0029",
+										"token": {
+											"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+											"chainId": 1,
+											"symbol": "USDT",
+											"decimals": 6,
+											"name": "USDT",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+											"coinKey": "USDT"
+										},
+										"amountUSD": "0.05"
+									},
+									{
+										"name": "Liquidity provider fees",
+										"description": "The fee paid to liquidity providers for the stargate protocol",
+										"amount": "0",
+										"percentage": "0.0000",
+										"token": {
+											"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+											"chainId": 1,
+											"symbol": "USDT",
+											"decimals": 6,
+											"name": "USDT",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+											"coinKey": "USDT"
+										},
+										"amountUSD": "0.00"
+									},
+									{
+										"name": "Protocol fees",
+										"description": "The fee paid to the stargate protocol",
+										"amount": "16234",
+										"percentage": "0.0010",
+										"token": {
+											"address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+											"chainId": 1,
+											"symbol": "USDT",
+											"decimals": 6,
+											"name": "USDT",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdt/23af7472292cb41dc39b3f1146ead0fe.png",
+											"coinKey": "USDT"
+										},
+										"amountUSD": "0.02"
+									}
+								],
+								"gasCosts": [
+									{
+										"type": "FEE",
+										"price": "22633444520",
+										"estimate": "0",
+										"limit": "0",
+										"amount": "61918120318219",
+										"amountUSD": "0.10",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									},
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "515625",
+										"limit": "687500",
+										"amount": "15560493107500000",
+										"amountUSD": "25.52",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"stargateData": {
+										"dstPoolId": "1",
+										"minAmountLD": "16090008",
+										"dstGasForCall": "0",
+										"refundAddress": "0x552008c0f6870c2f77e5cC1d2eb9bdff03e30Ea0",
+										"lzFee": "61918120318219",
+										"callTo": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+										"callData": "0x"
+									},
+									"offchainStargateData": {
+										"sourcePoolId": "2",
+										"destinationPoolId": "1",
+										"router": "0x8731d54E9D02c286767d56ac03e8037C07e01e98",
+										"layerZeroChainId": 109
+									}
+								}
+							},
+							"tool": "stargate",
+							"toolDetails": {
+								"key": "stargate",
+								"name": "Stargate",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/5685c638772f533edad80fcb210b4bb89e30a50f/src/assets/icons/bridges/stargate.png"
+							}
+						}
+					],
+					"integrator": "lifi-sdk"
+				}
+			],
+			"tags": []
+		},
+		{
+			"id": "0x490019a9bcf124cfa7e1e49b415ef4e54c6842847ccd7f7fe1e7ed7dd8e4187d",
+			"fromChainId": 1,
+			"fromAmountUSD": "16.40",
+			"fromAmount": "10000000000000000",
+			"fromToken": {
+				"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+				"chainId": 1,
+				"symbol": "WETH",
+				"decimals": 18,
+				"name": "WETH",
+				"priceUSD": "1640.28",
+				"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+				"coinKey": "WETH"
+			},
+			"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"toChainId": 137,
+			"toAmountUSD": "16.32",
+			"toAmount": "16321690",
+			"toAmountMin": "16158881",
+			"toToken": {
+				"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+				"chainId": 137,
+				"symbol": "USDC",
+				"decimals": 6,
+				"name": "USDC",
+				"priceUSD": "1",
+				"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+				"coinKey": "USDC"
+			},
+			"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"gasCostUSD": "28.62",
+			"containsSwitchChain": false,
+			"steps": [
+				{
+					"id": "b9a1eb84-6dec-48fe-aeb3-323045e2d2c5",
+					"type": "lifi",
+					"action": {
+						"fromChainId": 1,
+						"fromAmount": "10000000000000000",
+						"fromToken": {
+							"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+							"chainId": 1,
+							"symbol": "WETH",
+							"decimals": 18,
+							"name": "WETH",
+							"priceUSD": "1640.28",
+							"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+							"coinKey": "WETH"
+						},
+						"toChainId": 137,
+						"toToken": {
+							"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+							"chainId": 137,
+							"symbol": "USDC",
+							"decimals": 6,
+							"name": "USDC",
+							"priceUSD": "1",
+							"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+							"coinKey": "USDC"
+						},
+						"slippage": 0.005,
+						"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+						"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00"
+					},
+					"estimate": {
+						"fromAmount": "10000000000000000",
+						"toAmount": "16321690",
+						"toAmountMin": "16158881",
+						"approvalAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+						"executionDuration": 1460,
+						"feeCosts": [
+							{
+								"name": "LP Fee",
+								"percentage": "0.00039999967975391305",
+								"token": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amount": "6495",
+								"amountUSD": "0"
+							},
+							{
+								"name": "Bonder Fee",
+								"percentage": "0",
+								"token": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amount": "0",
+								"amountUSD": "0"
+							},
+							{
+								"name": "Destination Tx Fee",
+								"percentage": "0",
+								"token": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amount": "0",
+								"amountUSD": "0"
+							}
+						],
+						"gasCosts": [
+							{
+								"type": "SEND",
+								"price": "22633444520",
+								"estimate": "578231",
+								"limit": "770974",
+								"amount": "17449797255362480",
+								"amountUSD": "28.62",
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								}
+							}
+						],
+						"data": {
+							"fromToken": {
+								"symbol": "WETH",
+								"name": "Wrapped Ether",
+								"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+								"decimals": 18,
+								"logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
+								"wrappedNative": "true",
+								"tags": ["tokens", "PEG:ETH"]
+							},
+							"toToken": {
+								"symbol": "USDC",
+								"name": "USD Coin",
+								"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+								"decimals": 6,
+								"logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+								"eip2612": true,
+								"domainVersion": "2",
+								"tags": ["tokens", "PEG:USD"]
+							},
+							"toTokenAmount": "16319109",
+							"fromTokenAmount": "10000000000000000",
+							"protocols": [
+								[
+									[
+										{
+											"name": "DEFISWAP",
+											"part": 100,
+											"fromTokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+											"toTokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+										}
+									]
+								]
+							],
+							"estimatedGas": 186779
+						},
+						"fromAmountUSD": "16.40",
+						"toAmountUSD": "16.32"
+					},
+					"tool": "hop",
+					"toolDetails": {
+						"key": "hop",
+						"name": "Hop",
+						"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hop.png"
+					},
+					"includedSteps": [
+						{
+							"id": "b9a1eb84-6dec-48fe-aeb3-323045e2d2c5",
+							"type": "swap",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "10000000000000000",
+								"fromToken": {
+									"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+									"chainId": 1,
+									"symbol": "WETH",
+									"decimals": 18,
+									"name": "WETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+									"coinKey": "WETH"
+								},
+								"toChainId": 1,
+								"toToken": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "10000000000000000",
+								"toAmount": "16319109",
+								"toAmountMin": "16237513",
+								"approvalAddress": "0x1111111254eeb25477b68fb85ed929f73a960582",
+								"executionDuration": 30,
+								"feeCosts": [],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "175105",
+										"limit": "233474",
+										"amount": "5284315167501350",
+										"amountUSD": "8.67",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"fromToken": {
+										"symbol": "WETH",
+										"name": "Wrapped Ether",
+										"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+										"decimals": 18,
+										"logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
+										"wrappedNative": "true",
+										"tags": ["tokens", "PEG:ETH"]
+									},
+									"toToken": {
+										"symbol": "USDC",
+										"name": "USD Coin",
+										"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+										"decimals": 6,
+										"logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+										"eip2612": true,
+										"domainVersion": "2",
+										"tags": ["tokens", "PEG:USD"]
+									},
+									"toTokenAmount": "16319109",
+									"fromTokenAmount": "10000000000000000",
+									"protocols": [
+										[
+											[
+												{
+													"name": "DEFISWAP",
+													"part": 100,
+													"fromTokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+													"toTokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+												}
+											]
+										]
+									],
+									"estimatedGas": 186779
+								}
+							},
+							"tool": "1inch",
+							"toolDetails": {
+								"key": "1inch",
+								"name": "1inch",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oneinch.png"
+							}
+						},
+						{
+							"id": "73a87a90-45a2-47d7-96fa-cb22cbaf01be",
+							"type": "cross",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "16237513",
+								"fromToken": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"toChainId": 137,
+								"toToken": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "16319109",
+								"toAmount": "16321690",
+								"toAmountMin": "16158881",
+								"approvalAddress": "0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a",
+								"executionDuration": 1430,
+								"feeCosts": [
+									{
+										"name": "LP Fee",
+										"percentage": "0.00039999967975391305",
+										"token": {
+											"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+											"chainId": 137,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amount": "6495"
+									},
+									{
+										"name": "Bonder Fee",
+										"percentage": "0",
+										"token": {
+											"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+											"chainId": 137,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amount": "0"
+									},
+									{
+										"name": "Destination Tx Fee",
+										"percentage": "0",
+										"token": {
+											"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+											"chainId": 137,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amount": "0"
+									}
+								],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "215625",
+										"limit": "287500",
+										"amount": "6507115299500000",
+										"amountUSD": "10.67",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"amountOut": "16240081",
+									"rate": "1.000158",
+									"priceImpact": "-0.01580000000001025",
+									"requiredLiquidity": "16237513",
+									"lpFees": "6495",
+									"adjustedBonderFee": "0",
+									"adjustedDestinationTxFee": "0",
+									"totalFee": "0",
+									"estimatedReceived": "16240081"
+								}
+							},
+							"tool": "hop",
+							"toolDetails": {
+								"key": "hop",
+								"name": "Hop",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hop.png"
+							}
+						}
+					],
+					"integrator": "lifi-sdk"
+				}
+			],
+			"tags": ["SAFEST"]
+		},
+		{
+			"id": "0xaf0529a31b4753a71f48bd078da94e245d3ed23e2a209c431c27b8a985284137",
+			"fromChainId": 1,
+			"fromAmountUSD": "16.40",
+			"fromAmount": "10000000000000000",
+			"fromToken": {
+				"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+				"chainId": 1,
+				"symbol": "WETH",
+				"decimals": 18,
+				"name": "WETH",
+				"priceUSD": "1640.28",
+				"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+				"coinKey": "WETH"
+			},
+			"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"toChainId": 137,
+			"toAmountUSD": "16.31",
+			"toAmount": "16309319",
+			"toAmountMin": "16146633",
+			"toToken": {
+				"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+				"chainId": 137,
+				"symbol": "USDC",
+				"decimals": 6,
+				"name": "USDC",
+				"priceUSD": "1",
+				"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+				"coinKey": "USDC"
+			},
+			"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"gasCostUSD": "43.57",
+			"containsSwitchChain": false,
+			"steps": [
+				{
+					"id": "4a5535c8-0685-48b0-b362-46d848606399",
+					"type": "lifi",
+					"action": {
+						"fromChainId": 1,
+						"fromAmount": "10000000000000000",
+						"fromToken": {
+							"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+							"chainId": 1,
+							"symbol": "WETH",
+							"decimals": 18,
+							"name": "WETH",
+							"priceUSD": "1640.28",
+							"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+							"coinKey": "WETH"
+						},
+						"toChainId": 137,
+						"toToken": {
+							"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+							"chainId": 137,
+							"symbol": "USDC",
+							"decimals": 6,
+							"name": "USDC",
+							"priceUSD": "1",
+							"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+							"coinKey": "USDC"
+						},
+						"slippage": 0.005,
+						"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+						"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00"
+					},
+					"estimate": {
+						"fromAmount": "10000000000000000",
+						"toAmount": "16309319",
+						"toAmountMin": "16146633",
+						"approvalAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+						"executionDuration": 213,
+						"feeCosts": [
+							{
+								"name": "LayerZero fees",
+								"description": "Infrastructure fee paid in native token",
+								"amount": "61918120318219",
+								"percentage": "0.0063",
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Equilibrium fees",
+								"description": "The fee paid to users who rebalance tokens for the stargate protocol",
+								"amount": "487",
+								"percentage": "0.0000",
+								"token": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Liquidity provider fees",
+								"description": "The fee paid to liquidity providers for the stargate protocol",
+								"amount": "0",
+								"percentage": "0.0000",
+								"token": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amountUSD": "0"
+							},
+							{
+								"name": "Protocol fees",
+								"description": "The fee paid to the stargate protocol",
+								"amount": "9254",
+								"percentage": "0.0006",
+								"token": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amountUSD": "0"
+							}
+						],
+						"gasCosts": [
+							{
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								},
+								"type": "SEND",
+								"price": "45266889040",
+								"estimate": "0x0d6697",
+								"limit": "0x11de1e",
+								"amount": "26565093183680699",
+								"amountUSD": "43.57"
+							}
+						],
+						"data": {
+							"fromToken": {
+								"symbol": "WETH",
+								"name": "Wrapped Ether",
+								"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+								"decimals": 18,
+								"logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
+								"wrappedNative": "true",
+								"tags": ["tokens", "PEG:ETH"]
+							},
+							"toToken": {
+								"symbol": "USDC",
+								"name": "USD Coin",
+								"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+								"decimals": 6,
+								"logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+								"eip2612": true,
+								"domainVersion": "2",
+								"tags": ["tokens", "PEG:USD"]
+							},
+							"toTokenAmount": "16319109",
+							"fromTokenAmount": "10000000000000000",
+							"protocols": [
+								[
+									[
+										{
+											"name": "DEFISWAP",
+											"part": 100,
+											"fromTokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+											"toTokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+										}
+									]
+								]
+							],
+							"estimatedGas": 186779
+						},
+						"fromAmountUSD": "16.40",
+						"toAmountUSD": "16.31"
+					},
+					"tool": "stargate",
+					"toolDetails": {
+						"key": "stargate",
+						"name": "Stargate",
+						"logoURI": "https://raw.githubusercontent.com/lifinance/types/5685c638772f533edad80fcb210b4bb89e30a50f/src/assets/icons/bridges/stargate.png"
+					},
+					"includedSteps": [
+						{
+							"id": "4a5535c8-0685-48b0-b362-46d848606399",
+							"type": "swap",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "10000000000000000",
+								"fromToken": {
+									"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+									"chainId": 1,
+									"symbol": "WETH",
+									"decimals": 18,
+									"name": "WETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+									"coinKey": "WETH"
+								},
+								"toChainId": 1,
+								"toToken": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "10000000000000000",
+								"toAmount": "16319109",
+								"toAmountMin": "16237513",
+								"approvalAddress": "0x1111111254eeb25477b68fb85ed929f73a960582",
+								"executionDuration": 30,
+								"feeCosts": [],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "175105",
+										"limit": "233474",
+										"amount": "5284315167501350",
+										"amountUSD": "8.67",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"fromToken": {
+										"symbol": "WETH",
+										"name": "Wrapped Ether",
+										"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+										"decimals": 18,
+										"logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
+										"wrappedNative": "true",
+										"tags": ["tokens", "PEG:ETH"]
+									},
+									"toToken": {
+										"symbol": "USDC",
+										"name": "USD Coin",
+										"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+										"decimals": 6,
+										"logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+										"eip2612": true,
+										"domainVersion": "2",
+										"tags": ["tokens", "PEG:USD"]
+									},
+									"toTokenAmount": "16319109",
+									"fromTokenAmount": "10000000000000000",
+									"protocols": [
+										[
+											[
+												{
+													"name": "DEFISWAP",
+													"part": 100,
+													"fromTokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+													"toTokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+												}
+											]
+										]
+									],
+									"estimatedGas": 186779
+								}
+							},
+							"tool": "1inch",
+							"toolDetails": {
+								"key": "1inch",
+								"name": "1inch",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oneinch.png"
+							}
+						},
+						{
+							"id": "7aa32d79-4b06-4f13-8220-72de28bc214d",
+							"type": "cross",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "16237513",
+								"fromToken": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"toChainId": 137,
+								"toToken": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "16319109",
+								"toAmount": "16309319",
+								"toAmountMin": "16146633",
+								"approvalAddress": "0x8731d54E9D02c286767d56ac03e8037C07e01e98",
+								"executionDuration": 183,
+								"feeCosts": [
+									{
+										"name": "LayerZero fees",
+										"description": "Infrastructure fee paid in native token",
+										"amount": "61918120318219",
+										"percentage": "0.0063",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										},
+										"amountUSD": "0.10"
+									},
+									{
+										"name": "Equilibrium fees",
+										"description": "The fee paid to users who rebalance tokens for the stargate protocol",
+										"amount": "487",
+										"percentage": "0.0000",
+										"token": {
+											"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+											"chainId": 1,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amountUSD": "0.00"
+									},
+									{
+										"name": "Liquidity provider fees",
+										"description": "The fee paid to liquidity providers for the stargate protocol",
+										"amount": "0",
+										"percentage": "0.0000",
+										"token": {
+											"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+											"chainId": 1,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amountUSD": "0.00"
+									},
+									{
+										"name": "Protocol fees",
+										"description": "The fee paid to the stargate protocol",
+										"amount": "9254",
+										"percentage": "0.0006",
+										"token": {
+											"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+											"chainId": 1,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amountUSD": "0.01"
+									}
+								],
+								"gasCosts": [
+									{
+										"type": "FEE",
+										"price": "22633444520",
+										"estimate": "0",
+										"limit": "0",
+										"amount": "61918120318219",
+										"amountUSD": "0.10",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									},
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "515625",
+										"limit": "687500",
+										"amount": "15560493107500000",
+										"amountUSD": "25.52",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"stargateData": {
+										"dstPoolId": "1",
+										"minAmountLD": "16146633",
+										"dstGasForCall": "0",
+										"refundAddress": "0x552008c0f6870c2f77e5cC1d2eb9bdff03e30Ea0",
+										"lzFee": "61918120318219",
+										"callTo": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+										"callData": "0x"
+									},
+									"offchainStargateData": {
+										"sourcePoolId": "1",
+										"destinationPoolId": "1",
+										"router": "0x8731d54E9D02c286767d56ac03e8037C07e01e98",
+										"layerZeroChainId": 109
+									}
+								}
+							},
+							"tool": "stargate",
+							"toolDetails": {
+								"key": "stargate",
+								"name": "Stargate",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/5685c638772f533edad80fcb210b4bb89e30a50f/src/assets/icons/bridges/stargate.png"
+							}
+						}
+					],
+					"integrator": "lifi-sdk"
+				}
+			],
+			"tags": []
+		},
+		{
+			"id": "0x13af0b2f9fa7d8d3bbdecdae9d3501ae20300fd8af2e1a83d5bc6a0ab3e124d9",
+			"fromChainId": 1,
+			"fromAmountUSD": "16.40",
+			"fromAmount": "10000000000000000",
+			"fromToken": {
+				"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+				"chainId": 1,
+				"symbol": "WETH",
+				"decimals": 18,
+				"name": "WETH",
+				"priceUSD": "1640.28",
+				"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+				"coinKey": "WETH"
+			},
+			"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"toChainId": 137,
+			"toAmountUSD": "16.26",
+			"toAmount": "16258834",
+			"toAmountMin": "16177539",
+			"toToken": {
+				"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+				"chainId": 137,
+				"symbol": "USDC",
+				"decimals": 6,
+				"name": "USDC",
+				"priceUSD": "1",
+				"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+				"coinKey": "USDC"
+			},
+			"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+			"gasCostUSD": "24.91",
+			"containsSwitchChain": false,
+			"steps": [
+				{
+					"id": "dbc9ebb9-141a-4394-8248-212607d22ee7",
+					"type": "lifi",
+					"action": {
+						"fromChainId": 1,
+						"fromAmount": "10000000000000000",
+						"fromToken": {
+							"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+							"chainId": 1,
+							"symbol": "WETH",
+							"decimals": 18,
+							"name": "WETH",
+							"priceUSD": "1640.28",
+							"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+							"coinKey": "WETH"
+						},
+						"toChainId": 137,
+						"toToken": {
+							"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+							"chainId": 137,
+							"symbol": "USDC",
+							"decimals": 6,
+							"name": "USDC",
+							"priceUSD": "1",
+							"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+							"coinKey": "USDC"
+						},
+						"slippage": 0.005,
+						"toAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00",
+						"fromAddress": "0x069D9dE7371E16F8E3CADB4B0eafFF40cd977A00"
+					},
+					"estimate": {
+						"fromAmount": "10000000000000000",
+						"toAmount": "16258834",
+						"toAmountMin": "16177539",
+						"approvalAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+						"executionDuration": 201,
+						"feeCosts": [
+							{
+								"name": "Liquidity provider fee",
+								"description": "The fee taken by the liquidity provider",
+								"percentage": "0",
+								"token": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amount": "0",
+								"amountUSD": "0"
+							},
+							{
+								"name": "Relayer fee",
+								"description": "The fee taken by the relayer",
+								"percentage": "0.003693530610260327",
+								"token": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"amount": "59974",
+								"amountUSD": "0"
+							}
+						],
+						"gasCosts": [
+							{
+								"type": "SEND",
+								"price": "22633444520",
+								"estimate": "503231",
+								"limit": "670974",
+								"amount": "15186452803362480",
+								"amountUSD": "24.91",
+								"token": {
+									"address": "0x0000000000000000000000000000000000000000",
+									"chainId": 1,
+									"symbol": "ETH",
+									"decimals": 18,
+									"name": "ETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+									"coinKey": "ETH"
+								}
+							}
+						],
+						"data": {
+							"fromToken": {
+								"symbol": "WETH",
+								"name": "Wrapped Ether",
+								"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+								"decimals": 18,
+								"logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
+								"wrappedNative": "true",
+								"tags": ["tokens", "PEG:ETH"]
+							},
+							"toToken": {
+								"symbol": "USDC",
+								"name": "USD Coin",
+								"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+								"decimals": 6,
+								"logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+								"eip2612": true,
+								"domainVersion": "2",
+								"tags": ["tokens", "PEG:USD"]
+							},
+							"toTokenAmount": "16319109",
+							"fromTokenAmount": "10000000000000000",
+							"protocols": [
+								[
+									[
+										{
+											"name": "DEFISWAP",
+											"part": 100,
+											"fromTokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+											"toTokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+										}
+									]
+								]
+							],
+							"estimatedGas": 186779
+						},
+						"fromAmountUSD": "16.40",
+						"toAmountUSD": "16.26"
+					},
+					"tool": "across",
+					"toolDetails": {
+						"key": "across",
+						"name": "Across",
+						"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/acrossv2.png"
+					},
+					"includedSteps": [
+						{
+							"id": "dbc9ebb9-141a-4394-8248-212607d22ee7",
+							"type": "swap",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "10000000000000000",
+								"fromToken": {
+									"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+									"chainId": 1,
+									"symbol": "WETH",
+									"decimals": 18,
+									"name": "WETH",
+									"priceUSD": "1640.28",
+									"logoURI": "https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png",
+									"coinKey": "WETH"
+								},
+								"toChainId": 1,
+								"toToken": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "10000000000000000",
+								"toAmount": "16319109",
+								"toAmountMin": "16237513",
+								"approvalAddress": "0x1111111254eeb25477b68fb85ed929f73a960582",
+								"executionDuration": 30,
+								"feeCosts": [],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "175105",
+										"limit": "233474",
+										"amount": "5284315167501350",
+										"amountUSD": "8.67",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								],
+								"data": {
+									"fromToken": {
+										"symbol": "WETH",
+										"name": "Wrapped Ether",
+										"address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+										"decimals": 18,
+										"logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
+										"wrappedNative": "true",
+										"tags": ["tokens", "PEG:ETH"]
+									},
+									"toToken": {
+										"symbol": "USDC",
+										"name": "USD Coin",
+										"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+										"decimals": 6,
+										"logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+										"eip2612": true,
+										"domainVersion": "2",
+										"tags": ["tokens", "PEG:USD"]
+									},
+									"toTokenAmount": "16319109",
+									"fromTokenAmount": "10000000000000000",
+									"protocols": [
+										[
+											[
+												{
+													"name": "DEFISWAP",
+													"part": 100,
+													"fromTokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+													"toTokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+												}
+											]
+										]
+									],
+									"estimatedGas": 186779
+								}
+							},
+							"tool": "1inch",
+							"toolDetails": {
+								"key": "1inch",
+								"name": "1inch",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oneinch.png"
+							}
+						},
+						{
+							"id": "40cdebf6-ed7c-47e7-9bbb-30bc2616c23e",
+							"type": "cross",
+							"action": {
+								"fromChainId": 1,
+								"fromAmount": "16237513",
+								"fromToken": {
+									"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+									"chainId": 1,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"toChainId": 137,
+								"toToken": {
+									"address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+									"chainId": 137,
+									"symbol": "USDC",
+									"decimals": 6,
+									"name": "USDC",
+									"priceUSD": "1",
+									"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+									"coinKey": "USDC"
+								},
+								"slippage": 0.005,
+								"fromAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+								"toAddress": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE"
+							},
+							"estimate": {
+								"fromAmount": "16319109",
+								"toAmount": "16258834",
+								"toAmountMin": "16177539",
+								"approvalAddress": "0x4D9079Bb4165aeb4084c526a32695dCfd2F77381",
+								"executionDuration": 171,
+								"feeCosts": [
+									{
+										"name": "Liquidity provider fee",
+										"description": "The fee taken by the liquidity provider",
+										"percentage": "0",
+										"token": {
+											"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+											"chainId": 1,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amount": "0"
+									},
+									{
+										"name": "Relayer fee",
+										"description": "The fee taken by the relayer",
+										"percentage": "0.003693530610260327",
+										"token": {
+											"address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+											"chainId": 1,
+											"symbol": "USDC",
+											"decimals": 6,
+											"name": "USDC",
+											"priceUSD": "1",
+											"logoURI": "https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png",
+											"coinKey": "USDC"
+										},
+										"amount": "59974"
+									}
+								],
+								"gasCosts": [
+									{
+										"type": "SEND",
+										"price": "22633444520",
+										"estimate": "140625",
+										"limit": "187500",
+										"amount": "4243770847500000",
+										"amountUSD": "6.96",
+										"token": {
+											"address": "0x0000000000000000000000000000000000000000",
+											"chainId": 1,
+											"symbol": "ETH",
+											"decimals": 18,
+											"name": "ETH",
+											"priceUSD": "1640.28",
+											"logoURI": "https://static.debank.com/image/token/logo_url/eth/935ae4e4d1d12d59a99717a24f2540b5.png",
+											"coinKey": "ETH"
+										}
+									}
+								]
+							},
+							"tool": "across",
+							"toolDetails": {
+								"key": "across",
+								"name": "Across",
+								"logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/acrossv2.png"
+							}
+						}
+					],
+					"integrator": "lifi-sdk"
+				}
+			],
+			"tags": ["FASTEST"]
+		}
+	]
+}

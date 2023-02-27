@@ -148,6 +148,63 @@ export default class LifiController {
 			sendKeyResponse(res, "SOMETHING_WENT_WRONG");
 		}
 	};
+
+	// static getRoutes = async (req, res) => {
+	// 	try {
+	// 		const isTestnet = req.query.isTestnet;
+	// 		const fromChainId = req.query.fromChainId;
+	// 		const toChainId = req.query.toChainId;
+	// 		const fromTokenAddress = req.query.fromTokenAddress;
+	// 		const toTokenAddress = req.query.toTokenAddress;
+	// 		const fromAddress = req.query.fromAddress;
+	// 		const fromAmount = req.query.fromAmount;
+
+	// 		if (!this.isTestnetValid(isTestnet)) {
+	// 			sendKeyResponse(res, "INVALID_TESTNET");
+	// 			return;
+	// 		}
+
+	// 		if (
+	// 			!this.isRouteRequestValid(
+	// 				fromChainId,
+	// 				toChainId,
+	// 				fromTokenAddress,
+	// 				toTokenAddress,
+	// 				fromAddress,
+	// 				fromAmount
+	// 			)
+	// 		) {
+	// 			sendKeyResponse(res, "BAD_REQUEST");
+	// 			return;
+	// 		}
+
+	// 		const routes = await LifiDAO.getRoutes({
+	// 			isTestnet,
+	// 			fromChainId,
+	// 			toChainId,
+	// 			fromTokenAddress,
+	// 			toTokenAddress,
+	// 			fromAddress,
+	// 			fromAmount,
+	// 		});
+
+	// 		if (routes.status === "ERROR") {
+	// 			sendCustomResponse(res, "INTERNAL_SERVER_ERROR", {
+	// 				error: routes.error,
+	// 			});
+	// 		} else {
+	// 			if (routes.routes.length === 0) {
+	// 				sendKeyResponse(res, "NO_ROUTES");
+	// 			} else {
+	// 				sendCustomResponse(res, "SUCCESS", {
+	// 					routes: routes.routes,
+	// 				});
+	// 			}
+	// 		}
+	// 	} catch (err) {
+	// 		sendKeyResponse(res, "SOMETHING_WENT_WRONG");
+	// 	}
+	// };
 }
 
 // Route Exist (Mainnet)
