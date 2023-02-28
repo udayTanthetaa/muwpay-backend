@@ -1,3 +1,4 @@
+import { Result } from "ethers";
 import LifiDAO from "../../dao/lifiDAO.js";
 import { sendKeyResponse, sendCustomResponse } from "../../responses/index.js";
 
@@ -26,6 +27,14 @@ export default class LifiController {
 			fromAddress === undefined ||
 			fromAmount === undefined
 		) {
+			return false;
+		} else {
+			return true;
+		}
+	};
+
+	static isStatusRequestValid = (bridge, fromChain, toChain, txHash) => {
+		if (bridge === undefined || fromChain === undefined || toChain === undefined || txHash === undefined) {
 			return false;
 		} else {
 			return true;
@@ -143,6 +152,46 @@ export default class LifiController {
 						routes: routes.routes,
 					});
 				}
+			}
+		} catch (err) {
+			sendKeyResponse(res, "SOMETHING_WENT_WRONG");
+		}
+	};
+
+	static getStatus = async (req, res) => {
+		try {
+			const isTestnet = req.query.isTestnet;
+			const bridge = req.query.bridge;
+			const fromChain = req.query.fromChain;
+			const toChain = req.query.toChain;
+			const txHash = req.query.txHash;
+
+			if (!this.isTestnetValid(isTestnet)) {
+				sendKeyResponse(res, "INVALID_TESTNET");
+				return;
+			}
+
+			if (!this.isStatusRequestValid(bridge, fromChain, toChain, txHash)) {
+				sendKeyResponse(res, "INVALID_STATUS_REQUEST");
+				return;
+			}
+
+			const result = await LifiDAO.getStatus({
+				isTestnet: isTestnet,
+				bridge: bridge,
+				fromChain: fromChain,
+				toChain: toChain,
+				txHash: txHash,
+			});
+
+			if (result.status === "ERROR") {
+				sendCustomResponse(res, "INTERNAL_SERVER_ERROR", {
+					error: result.error,
+				});
+			} else {
+				sendCustomResponse(res, "SUCCESS", {
+					data: result.data,
+				});
 			}
 		} catch (err) {
 			sendKeyResponse(res, "SOMETHING_WENT_WRONG");

@@ -7,6 +7,19 @@ export default class LifiDAO {
 		return isTestnet === "true" ? stagingUrl : productionUrl;
 	};
 
+	static getSupportedChains = ({ chains }) => {
+		let chainsSupported = [];
+
+		for (let i = 0; i < chains.length; i++) {
+			chainsSupported.push({
+				id: chains[i].id,
+				name: chains[i].name,
+			});
+		}
+
+		return chainsSupported;
+	};
+
 	static getChains = async ({ isTestnet }) => {
 		try {
 			const apiUrl = this.getApiUrl(isTestnet);
@@ -90,6 +103,44 @@ export default class LifiDAO {
 				status: "FOUND",
 				routes: routeResponse.routes,
 			};
+		} catch (err) {
+			return {
+				status: "ERROR",
+				error: err,
+			};
+		}
+	};
+
+	static getStatus = async ({ isTestnet, bridge, fromChain, toChain, txHash }) => {
+		try {
+			const apiUrl = this.getApiUrl(isTestnet);
+
+			let Lifi = new LifiSDK.default();
+			let newConfig = Lifi.getConfig();
+			newConfig.apiUrl = apiUrl;
+			Lifi.setConfig(newConfig);
+
+			const data = await fetch(
+				`${apiUrl}status?bridge=${bridge}&fromChain=${fromChain}&toChain=${toChain}&txHash=${txHash}`,
+				{
+					method: "GET",
+					headers: { accept: "application/json" },
+				}
+			);
+
+			const json = await data.json();
+
+			if (json.status === undefined || json.status === "NOT_FOUND") {
+				return {
+					status: "ERROR",
+					error: "Transaction Request is Invalid.",
+				};
+			} else {
+				return {
+					status: "SUCCESS",
+					data: json,
+				};
+			}
 		} catch (err) {
 			return {
 				status: "ERROR",

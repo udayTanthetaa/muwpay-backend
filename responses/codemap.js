@@ -63,12 +63,16 @@ export const Codemap = {
 		message: "Invalid Email",
 	},
 	INVALID_USERNAME: {
-		code: 400,
+		code: 200,
 		message: "Invalid Username",
 	},
 	INVALID_PASSWORD: {
 		code: 200,
 		message: "Invalid Password",
+	},
+	INVALID_STATUS_REQUEST: {
+		code: 200,
+		message: "Status Request is Invalid",
 	},
 
 	AUTH_TOKEN_MISSING: {
