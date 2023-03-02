@@ -117,7 +117,7 @@ export default class LifiController {
 
 						stepMap.push({
 							type: "token",
-							symbol: routes[i].steps[j].includedSteps[k].action.toToken.symbol,
+							name: routes[i].steps[j].includedSteps[k].action.toToken.symbol,
 							logoURI: routes[i].steps[j].includedSteps[k].action.toToken.logoURI,
 							chainId: routes[i].steps[j].includedSteps[k].action.toToken.chainId,
 						});
