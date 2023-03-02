@@ -41,6 +41,96 @@ export default class LifiController {
 		}
 	};
 
+	static createStepMap = ({ routes }) => {
+		const getDirection = {
+			0: "down",
+			1: "right",
+			2: "down",
+			3: "left",
+		};
+
+		let stepMaps = [];
+
+		for (let i = 0; i < routes.length; i++) {
+			let isInitial = true;
+			let stepMap = [];
+			let stepCounter = 0;
+
+			for (let j = 0; j < routes[i].steps.length; j++) {
+				for (let k = 0; k < routes[i].steps[j].includedSteps.length; k++) {
+					if (isInitial === true) {
+						stepMap.push({
+							type: "token",
+							name: routes[i].steps[j].includedSteps[k].action.fromToken.symbol,
+							logoURI: routes[i].steps[j].includedSteps[k].action.fromToken.logoURI,
+							chainId: routes[i].steps[j].includedSteps[k].action.fromToken.chainId,
+						});
+
+						stepMap.push({
+							type: "direction",
+							name: getDirection[stepCounter % 4],
+						});
+
+						stepCounter = stepCounter + 1;
+
+						stepMap.push({
+							type: "tool",
+							name: routes[i].steps[j].includedSteps[k].toolDetails.name,
+							logoURI: routes[i].steps[j].includedSteps[k].toolDetails.logoURI,
+						});
+
+						stepMap.push({
+							type: "direction",
+							name: getDirection[stepCounter % 4],
+						});
+
+						stepCounter = stepCounter + 1;
+
+						stepMap.push({
+							type: "token",
+							name: routes[i].steps[j].includedSteps[k].action.toToken.symbol,
+							logoURI: routes[i].steps[j].includedSteps[k].action.toToken.logoURI,
+							chainId: routes[i].steps[j].includedSteps[k].action.toToken.chainId,
+						});
+
+						isInitial = false;
+					} else {
+						stepMap.push({
+							type: "direction",
+							name: getDirection[stepCounter % 4],
+						});
+
+						stepCounter = stepCounter + 1;
+
+						stepMap.push({
+							type: "tool",
+							name: routes[i].steps[j].includedSteps[k].toolDetails.name,
+							logoURI: routes[i].steps[j].includedSteps[k].toolDetails.logoURI,
+						});
+
+						stepMap.push({
+							type: "direction",
+							name: getDirection[stepCounter % 4],
+						});
+
+						stepCounter = stepCounter + 1;
+
+						stepMap.push({
+							type: "token",
+							symbol: routes[i].steps[j].includedSteps[k].action.toToken.symbol,
+							logoURI: routes[i].steps[j].includedSteps[k].action.toToken.logoURI,
+							chainId: routes[i].steps[j].includedSteps[k].action.toToken.chainId,
+						});
+					}
+				}
+			}
+
+			stepMaps.push(stepMap);
+		}
+
+		return stepMaps;
+	};
+
 	static getChains = async (req, res) => {
 		try {
 			const isTestnet = req.query.isTestnet;
@@ -148,8 +238,11 @@ export default class LifiController {
 				if (routes.routes.length === 0) {
 					sendKeyResponse(res, "NO_ROUTES");
 				} else {
+					const stepMaps = this.createStepMap({ routes: routes.routes });
+
 					sendCustomResponse(res, "SUCCESS", {
 						routes: routes.routes,
+						stepMaps: stepMaps,
 					});
 				}
 			}
