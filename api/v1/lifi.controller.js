@@ -66,10 +66,10 @@ export default class LifiController {
 							chainId: routes[i].steps[j].includedSteps[k].action.fromToken.chainId,
 						});
 
-						stepMap.push({
-							type: "direction",
-							name: getDirection[stepCounter % 4],
-						});
+						// stepMap.push({
+						// 	type: "direction",
+						// 	name: getDirection[stepCounter % 4],
+						// });
 
 						stepCounter = stepCounter + 1;
 
@@ -79,10 +79,10 @@ export default class LifiController {
 							logoURI: routes[i].steps[j].includedSteps[k].toolDetails.logoURI,
 						});
 
-						stepMap.push({
-							type: "direction",
-							name: getDirection[stepCounter % 4],
-						});
+						// stepMap.push({
+						// 	type: "direction",
+						// 	name: getDirection[stepCounter % 4],
+						// });
 
 						stepCounter = stepCounter + 1;
 
@@ -95,10 +95,10 @@ export default class LifiController {
 
 						isInitial = false;
 					} else {
-						stepMap.push({
-							type: "direction",
-							name: getDirection[stepCounter % 4],
-						});
+						// stepMap.push({
+						// 	type: "direction",
+						// 	name: getDirection[stepCounter % 4],
+						// });
 
 						stepCounter = stepCounter + 1;
 
@@ -108,10 +108,10 @@ export default class LifiController {
 							logoURI: routes[i].steps[j].includedSteps[k].toolDetails.logoURI,
 						});
 
-						stepMap.push({
-							type: "direction",
-							name: getDirection[stepCounter % 4],
-						});
+						// stepMap.push({
+						// 	type: "direction",
+						// 	name: getDirection[stepCounter % 4],
+						// });
 
 						stepCounter = stepCounter + 1;
 
