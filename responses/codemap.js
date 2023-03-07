@@ -83,6 +83,10 @@ export const Codemap = {
 		code: 200,
 		message: "User Not Found",
 	},
+	SWAP_NOT_FOUND: {
+		code: 200,
+		message: "Swap Not Found",
+	},
 	NO_ROUTES: {
 		code: 200,
 		message: "No Routes Available",

@@ -1,6 +1,19 @@
 import LifiSDK from "@lifi/sdk";
 
+let swaps;
 export default class LifiDAO {
+	static injectDB = async (conn) => {
+		if (swaps) {
+			return;
+		}
+
+		try {
+			swaps = await conn.db(process.env.MUWPAY_NS).collection("swaps");
+		} catch (err) {
+			console.error(`Unable to establish connection handle in usersDAO => ${err}`);
+		}
+	};
+
 	static getApiUrl = (isTestnet) => {
 		const stagingUrl = "https://staging.li.quest/v1/";
 		const productionUrl = "https://li.quest/v1/";
@@ -98,6 +111,20 @@ export default class LifiDAO {
 
 		try {
 			const routeResponse = await Lifi.getRoutes(routeRequest);
+
+			if (routeResponse.routes.length !== 0) {
+				await Promise.allSettled(
+					routeResponse.routes.map((route, index) => {
+						let swapDoc = {
+							_id: route.id,
+							started: "FALSE",
+							...route,
+						};
+
+						swaps.insertOne(swapDoc);
+					})
+				);
+			}
 
 			return {
 				status: "FOUND",
