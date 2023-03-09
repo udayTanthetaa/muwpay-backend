@@ -117,7 +117,7 @@ export default class LifiDAO {
 					routeResponse.routes.map((route, index) => {
 						let swapDoc = {
 							_id: route.id,
-							started: "FALSE",
+							status: "PENDING",
 							...route,
 						};
 

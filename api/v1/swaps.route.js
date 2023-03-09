@@ -3,6 +3,7 @@ import SwapsController from "./swaps.controller.js";
 
 const router = express.Router();
 
-router.route("/swaps").post(SwapsController.addSwap);
+router.route("/start").post(SwapsController.startSwap);
+router.route("/user").get(SwapsController.getSwaps);
 
 export default router;

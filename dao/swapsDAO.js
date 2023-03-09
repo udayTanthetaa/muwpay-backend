@@ -16,7 +16,7 @@ export default class SwapsDAO {
 		}
 	};
 
-	static addSwap = async (id, res) => {
+	static startSwap = async (id, res) => {
 		try {
 			const swapExists = await swaps.findOne({
 				_id: id,
@@ -33,12 +33,17 @@ export default class SwapsDAO {
 				},
 				{
 					$set: {
-						started: "TRUE",
+						status: "STARTED",
 					},
 				}
 			);
 
 			sendKeyResponse(res, "SUCCESS");
+		} catch (err) {}
+	};
+
+	static getSwaps = async (address) => {
+		try {
 		} catch (err) {
 			sendKeyResponse(res, "INTERNAL_SERVER_ERROR");
 		}
