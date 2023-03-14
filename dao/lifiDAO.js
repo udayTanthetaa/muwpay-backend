@@ -112,6 +112,8 @@ export default class LifiDAO {
 		try {
 			const routeResponse = await Lifi.getRoutes(routeRequest);
 
+			console.log(routeResponse);
+
 			if (routeResponse.routes.length !== 0) {
 				await Promise.allSettled(
 					routeResponse.routes.map((route, index) => {
@@ -131,6 +133,7 @@ export default class LifiDAO {
 				routes: routeResponse.routes,
 			};
 		} catch (err) {
+			console.log(err);
 			return {
 				status: "ERROR",
 				error: err,

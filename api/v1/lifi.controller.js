@@ -291,6 +291,8 @@ export default class LifiController {
 
 	static getChains = async (req, res) => {
 		try {
+			console.log("Chain API Called");
+
 			const isTestnet = req.query.isTestnet;
 
 			if (!this.isTestnetValid(isTestnet)) {
@@ -311,9 +313,11 @@ export default class LifiController {
 					});
 				}
 			} else {
+				console.log(err);
 				sendKeyResponse(res, chains.status);
 			}
 		} catch (err) {
+			console.log(err);
 			sendKeyResponse(res, "SOMETHING_WENT_WRONG");
 		}
 	};
